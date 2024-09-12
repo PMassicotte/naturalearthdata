@@ -15,5 +15,6 @@ pub mod download;
 /// Types used in the application.
 pub mod types;
 
+pub use crate::types::cultural::CulturalType;
 pub use crate::types::physical::PhysicalType;
 pub use crate::types::scales::Scale;

@@ -10,7 +10,7 @@ homepage = "https://github.com/PMassicotte/naturalearthdata"
 documentation = "https://docs.rs/naturalearthdata"
 readme = "README.md"
 keywords = ["naturalearthdata", "geospatial", "data", "gdal", "geoarrow"]
-categories = ["science", "data-processing", "geospatial"]
+categories = ["science", "science::geo"]
 
 [dependencies]
 gdal = "0.17.0"

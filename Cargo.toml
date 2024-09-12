@@ -2,8 +2,16 @@
 name = "naturalearthdata"
 version = "0.1.0"
 edition = "2021"
+authors = ["Philippe Massicotte pmassicotte@hotmail.com"]
+description = "A Rust library for downloading Natural Earth data."
+license = "MIT"
+repository = "https://github.com/PMassicotte/naturalearthdata"
+homepage = "https://github.com/PMassicotte/naturalearthdata"
+documentation = "https://docs.rs/naturalearthdata"
+readme = "README.md"
+keywords = ["naturalearthdata", "geospatial", "data", "gdal", "geoarrow"]
+categories = ["science", "data-processing", "geospatial"]
 
 [dependencies]
-# arrow = "53.0.0"
 gdal = "0.17.0"
 geoarrow = { version = "0.3.0", features = ["gdal"] }

@@ -1,6 +1,6 @@
 [package]
 name = "naturalearthdata"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Philippe Massicotte pmassicotte@hotmail.com"]
 description = "A Rust library for downloading Natural Earth data."

@@ -61,7 +61,7 @@ pub enum PhysicalType {
 }
 impl Downloadable for PhysicalType {
     fn get_url(&self, scale: &Scale) -> String {
-        let scale_suffix = scale.suffix();
+        let scale_suffix = scale.scale_label();
 
         let prefix = "/vsizip/vsicurl/https://naciscdn.org/naturalearth/";
 

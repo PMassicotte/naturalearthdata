@@ -91,7 +91,7 @@ impl Downloadable for CulturalType {
     fn get_url(&self, scale: &Scale) -> String {
         let prefix = "/vsizip/vsicurl/https://naciscdn.org/naturalearth/";
 
-        let scale_suffix = scale.suffix();
+        let scale_suffix = scale.scale_label();
 
         match self {
             CulturalType::Admin0AntarcticClaimLimitLines => format!(

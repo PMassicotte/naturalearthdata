@@ -1,0 +1,9 @@
+[package]
+name = "naturalearthdata"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# arrow = "53.0.0"
+gdal = "0.17.0"
+geoarrow = { version = "0.3.0", features = ["gdal"] }

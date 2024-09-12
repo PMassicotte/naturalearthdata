@@ -2,7 +2,7 @@
 name = "naturalearthdata"
 version = "0.1.1"
 edition = "2021"
-authors = ["Philippe Massicotte pmassicotte@hotmail.com"]
+authors = ["Philippe Massicotte <pmassicotte@hotmail.com>"]
 description = "A Rust library for downloading Natural Earth data."
 license = "MIT"
 repository = "https://github.com/PMassicotte/naturalearthdata"

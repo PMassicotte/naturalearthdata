@@ -6,6 +6,7 @@ library(httr2)
 library(fs)
 library(janitor)
 
+# Get the download links for the specified url
 get_raw_links <- function(base_url) {
   urls <- read_html(base_url) |>
     html_elements(".download-link") |>
@@ -14,6 +15,7 @@ get_raw_links <- function(base_url) {
   urls
 }
 
+# Change the prefix to point to the correct url
 fix_urls <- function(urls) {
   str_replace_all(
     urls,
@@ -31,6 +33,7 @@ urls <- tibble(scale = c("10m", "50m", "110m")) |>
   mutate(raw_links = map(urls, get_raw_links)) |>
   mutate(fixed_urls = map(raw_links, fix_urls))
 
+# Keep only the valid urls (some have broken links)
 urls <- urls |>
   unnest(fixed_urls) |>
   select(scale, type, fixed_urls) |>
@@ -41,8 +44,10 @@ urls <- urls |>
 
 urls
 
-# Create the enum name for rust
-
+# Create the enum names using upper camel case for rust
+# For example:
+# ne_10m_admin_0_countries --> Admin0Countries
+# ne_10m_admin_0_countries_egy --> Admin0CountriesEgy
 urls <- urls |>
   mutate(basename = path_file(fixed_urls), .before = fixed_urls) |>
   mutate(basename = path_ext_remove(basename)) |>
@@ -55,6 +60,7 @@ urls <- urls |>
     )
   )
 
+# Create rust code that can be pasted (I am lazy)
 # CulturalType::Admin0Countries => format!("/vsizip/vsicurl/https://naciscdn.org/naturalearth/{}/cultural/ne_{}_admin_0_countries.zip", scale_suffix, scale_suffix),
 
 rust_match <- r"({type}Type::{enum_name} => format!("{fixed_urls}", prefix, scale_suffix, scale_suffix),)"

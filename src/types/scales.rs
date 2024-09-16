@@ -12,9 +12,9 @@ impl Scale {
     /// Returns the scale suffix as a string.
     pub fn scale_label(&self) -> &str {
         match self {
-            Scale::Small => "10m",
+            Scale::Small => "110m",
             Scale::Medium => "50m",
-            Scale::Large => "110m",
+            Scale::Large => "10m",
         }
     }
 }

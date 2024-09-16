@@ -308,9 +308,9 @@ mod tests {
 
         for (physical_type, scale_suffix, expected_url) in test_cases {
             let scale = match scale_suffix {
-                "10m" => &scale_small,
+                "110m" => &scale_small,
                 "50m" => &scale_medium,
-                "110m" => &scale_large,
+                "10m" => &scale_large,
                 _ => panic!("Unexpected scale suffix"),
             };
 

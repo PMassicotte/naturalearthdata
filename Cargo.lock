@@ -759,7 +759,7 @@ dependencies = [
 [[package]]
 name = "geoarrow"
 version = "0.3.0"
-source = "git+https://github.com/geoarrow/geoarrow-rs#e12a4982a56f6a875536a7a22f645977877bc7a6"
+source = "git+https://github.com/geoarrow/geoarrow-rs?rev=e12a4982a56f6a875536a7a22f645977877bc7a6#e12a4982a56f6a875536a7a22f645977877bc7a6"
 dependencies = [
  "arrow 52.2.0",
  "arrow-array 52.2.0",

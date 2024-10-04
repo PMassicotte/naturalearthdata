@@ -30,7 +30,7 @@ pub fn ne_download<T: Downloadable>(
     // Get the layer (assuming there is only one layer)
     let mut layer = dataset.layer(0)?;
 
-    // Using None will get all rows, specifying a number will create many batch wwith of that size
+    // Using None will get all rows, specifying a number will create many batch with of that size
     let reader = read_gdal(&mut layer, None)?;
     let table: Table = reader.try_into()?;
 

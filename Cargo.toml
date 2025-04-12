@@ -13,7 +13,7 @@ keywords = ["naturalearthdata", "geospatial", "data", "gdal", "geoarrow"]
 categories = ["science", "science::geo"]
 
 [dependencies]
-gdal = "0.17.0"
+gdal = { version = "0.17.0", features = ["bindgen"] }
 # geoarrow = { version = "0.3.0", features = ["gdal"] }
 geoarrow = { git = "https://github.com/geoarrow/geoarrow-rs", rev = "e12a4982a56f6a875536a7a22f645977877bc7a6", features = [
   "gdal",
